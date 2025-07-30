@@ -1,3 +1,6 @@
+---
+layout: none
+---
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,7 +15,12 @@
 		rel="stylesheet">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 	<link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600&display=swap" rel="stylesheet">
-
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+	<script>
+    $(function () {
+        $("#nav-placeholder").load("nav.html");
+    });
+	</script>
 	<!-- Custom Styles -->
 	<style>
 		body {
@@ -117,49 +125,13 @@
 
 <body class="d-flex flex-column min-vh-100">
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light border-bottom"
-			style="background-color: #eef2f7; z-index: 1030;">
-			<div class="container-fluid px-4 py-2">
-				<a class="navbar-brand" href="#">
-					<img src="tbp.png" alt="Tau Beta Pi Logo" class="header-logo">
-				</a>
-				<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-					data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
-					aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-				<div class="collapse navbar-collapse" id="navbarResponsive">
-					<ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
-						<li class="nav-item">
-							<a class="nav-link fw-bold" href="about.html">ABOUT</a>
-						</li>
-						<li class="nav-item dropdown d-flex align-items-center">
-							<a class="btn btn-custom" href="./officers.html">PEOPLE</a>
-							<a class="btn btn-custom dropdown-toggle dropdown-toggle-split" href="#" id="navbarDropdown"
-								role="button" data-bs-toggle="dropdown" aria-expanded="false">
-								<span class="visually-hidden">Toggle Dropdown</span>
-							</a>
-							<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-								<li><a class="dropdown-item" href="./officers.html">Fall 2024</a></li>
-								<li><a class="dropdown-item" href="#">Spring 2024</a></li>
-								<li><a class="dropdown-item" href="#">Fall 2023</a></li>
-							</ul>
-						</li>
-
-						<li class="nav-item">
-							<a class="btn btn-custom" href="#">CONTACT US</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</nav>
-		<div style="background-color:#1c3d6e; height: 0.5rem"></div>
+    <div id="nav-placeholder"></div>
 
     <!-- Main Content -->
     <main class="flex-grow-1">
 
          <!-- Contact Section -->
-		 <section class="section contact-section text-center">
+		 <section class="section section-light contact-section text-center">
             <h1>Contact Us</h1>
             <p>Thanks for wanting to reach out! Here is our information!</p>
             <p>For general questions, please email tbp@njit.edu.</p>
@@ -174,11 +146,11 @@
         </section>
 
         <!-- Officer Section -->
-        <section class="section officer-section text-left" style="margin-top: -7rem;">
+        <section class="section officer-section text-left section-light" style="margin-top: -7rem;">
             <h1>Spring 2024 Eboard Officers</h1>
 
             <!-- Officers List -->
-            <div class='container'>
+            <div class='container section-light'>
 				<!-- President -->
 				<div class='officer-card'>
 					<img src='./placeholder.jpg' alt='President Image'>
@@ -190,7 +162,7 @@
 					</div>
 				</div>
         <!-- Vice President -->
-        <div class='officer-card'>
+        		<div class='officer-card'>
 					<img src='./placeholder.jpg' alt='VPIA Image'>
 					<div class='officer-details'>
 						<h6>VICE PRESIDENT OF INTERNAL AFFAIRS: Alex Goodwin</h6>
@@ -243,5 +215,7 @@
 
 				Add remaining officer cards here...
 			</main>
-			</body>
+			<!-- Bootstrap JS Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
