@@ -3,7 +3,6 @@ description: NJIT's Tau Beta Pi Chapter website
 # baseurl: "" # Only set this if you're using a project page (e.g. /my-repo)
 url: "https://pranav-r-a.github.io" # Replace with your actual GitHub Pages URL
 
-theme: minima # or leave blank if you’re using a custom layout
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
